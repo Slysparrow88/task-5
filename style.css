@@ -1,0 +1,10 @@
+ul{
+    display: flex;
+    margin: 0;
+}
+body{
+    display:flex;
+}
+#firstBlock, #secondBlock{
+    width: 150px;
+}
