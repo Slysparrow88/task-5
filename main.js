@@ -17,14 +17,23 @@ function renderList() {
         ul.append(btn);
         firstBlock.append(ul);
 
+        // btn.onclick = () => {
+        //     const move = event.target.parentElement;
+
+        //     if (move.parentElement === secondBlock) {
+        //         firstBlock.append(move);
+        //     } else if (move.parentElement === firstBlock) {
+        //         secondBlock.append(move);
+        //     }
+        // }
+
         btn.onclick = () => {
             const move = event.target.parentElement;
-        
+
             move.parentElement === secondBlock ? firstBlock.append(move) :
                 move.parentElement === firstBlock ? secondBlock.append(move) :
                     false;
         }
+
     }
 } renderList();
-
-
