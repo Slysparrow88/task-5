@@ -19,12 +19,12 @@ function renderList() {
 
         btn.onclick = () => {
             const move = event.target.parentElement;
-
-            if (move.parentElement === secondBlock) {
-                firstBlock.append(move);
-            } else if (move.parentElement === firstBlock) {
-                secondBlock.append(move);
-            }
+        
+            move.parentElement === secondBlock ? firstBlock.append(move) :
+                move.parentElement === firstBlock ? secondBlock.append(move) :
+                    false;
         }
     }
 } renderList();
+
+
